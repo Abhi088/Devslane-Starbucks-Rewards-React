@@ -12,7 +12,7 @@ interface Props {
     children: React.ReactNode;
 }
 
-const Card: React.FC<Props> = ({
+const VertCard: React.FC<Props> = ({
     className,
     heading_mobile,
     heading_lg,
@@ -24,7 +24,6 @@ const Card: React.FC<Props> = ({
 }) => {
     let outDiv = "";
     let inDiv = "";
-    let h3 = "";
     if (applyMediaQueries === true) {
         outDiv = "md:flex-col md:items-center";
         inDiv = "md:text-center";
@@ -43,11 +42,11 @@ const Card: React.FC<Props> = ({
     );
 };
 
-Card.defaultProps = {
+VertCard.defaultProps = {
     className: "",
 };
 
-export default Card;
+export default VertCard;
 
 {/* <div className="flex md:flex-col md:items-center space-x-4">
     <img className="h-12 md:w-12"
