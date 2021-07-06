@@ -1,24 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Nav from './Components/Sections/Nav';
+import Header from './Components/Sections/Header';
+import Hero from './Components/Sections/Hero';
+import GettingStarted from './Components/Sections/GettingStarted';
+import Favourites from './Components/Sections/Favourites';
+import EndlessExtras from './Components/Sections/EndlessExtras';
+import EarnStars from './Components/Sections/EarnStars';
+import StarCode from './Components/Sections/StarCode';
+import RulesAndInfo from './Components/Sections/RulesAndInfo';
+import Footer from './Components/Sections/Footer';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Nav />
+      <Header />
+      <Hero />
+      <GettingStarted />
+      <Favourites />
+      <EndlessExtras />
+      <EarnStars />
+      <StarCode />
+      <RulesAndInfo />
+      <hr className="my-12" />
+      <Footer />
     </div>
   );
 }
