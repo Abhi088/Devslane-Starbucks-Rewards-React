@@ -2,7 +2,7 @@ interface Props {
     className?: string;
 }
 
-const StepImageComponent: React.FC<Props> = ({
+const Divider: React.FC<Props> = ({
     className
 }) => {
     return (
@@ -10,8 +10,8 @@ const StepImageComponent: React.FC<Props> = ({
     );
 };
 
-StepImageComponent.defaultProps = {
+Divider.defaultProps = {
     className: "",
 };
 
-export default StepImageComponent;
+export default Divider;

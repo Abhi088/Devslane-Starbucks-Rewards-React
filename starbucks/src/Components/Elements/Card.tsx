@@ -9,8 +9,7 @@ interface Props {
     src: string;
     ImgClass: string;
     applyMediaQueries: boolean;
-    body_mobile: string;
-    body_lg: string;
+    children: React.ReactNode;
 }
 
 const Card: React.FC<Props> = ({
@@ -22,25 +21,22 @@ const Card: React.FC<Props> = ({
     src,
     ImgClass,
     applyMediaQueries,
-    body_mobile,
-    body_lg,
 }) => {
     let outDiv = "";
     let inDiv = "";
     let h3 = "";
     if (applyMediaQueries === true) {
         outDiv = "md:flex-col md:items-center";
-        inDiv = "md:items-center";
+        inDiv = "md:text-center";
     }
     return (
-        <div className={"flex " + outDiv + " space-x-4 " + className}>
+        <div className={"flex " + outDiv + " space-x-4" + className}>
             <Image src={src} alt={alt} className={ImgClass}></Image>
             <div>
                 <div className={"flex flex-col space-y-3 " + inDiv}>
                     <H3 className={"md:hidden "}>{heading_mobile}</H3>
                     <H3 className={"hidden md:block "}>{heading_lg}</H3>
-                    <p className={"text-sm font-semibold md:hidden"}>{body_mobile}</p>
-                    <p className={"text-sm font-semibold text-center hidden md:block"}>{body_lg}</p>
+                    {children}
                 </div>
             </div>
         </div>
